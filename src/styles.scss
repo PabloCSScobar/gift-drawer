@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  color-scheme: dark;
+}
+
+
+body {
+  background-image: url('assets/background.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.text-shadow {
+  text-shadow: 0 0 2px #000;
+  -moz-text-shadow: 0 0 2px #000;
+  -webkit-text-shadow: 0 0 2px #000;
+}
+
+* {
+  scrollbar-width: 18px;/*thin;*/
+  scrollbar-color: #fd0000f6 #7effad4b;
+}
+*::-webkit-scrollbar {
+  margin-left: 2px;
+  width: 18px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #7effad4b;        /* color of the tracking area */
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #fd0000f6;    /* color of the scroll thumb */
+  border-radius: 1px;       /* roundness of the scroll thumb */
+  border: 1px solid #7effad4b;  /* creates padding around scroll thumb */
+}

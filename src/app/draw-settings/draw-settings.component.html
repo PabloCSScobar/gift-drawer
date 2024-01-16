@@ -1,0 +1,45 @@
+<div class="flex h-screen flex-col justify-evenly items-center">
+  <form class="w-8/12 flex flex-col gap-5">
+    <div>
+      <p class="text-gray-300 text-shadow">Anonymous mode</p>
+      <span class="text-sm font-medium text-gray-300 text-shadow">
+        Send drawing results via email. Each participant will receive
+        information about their drawn gift recipient. Otherwise pairings will be
+        publicly displayed.
+      </span>
+    </div>
+    <label class="relative cursor-pointer">
+      <input
+        [checked]="!drawService.isPublicDrawing"
+        (change)="drawService.isPublicDrawing = !drawService.isPublicDrawing"
+        type="checkbox" 
+        class="sr-only peer" />
+      <div
+        class="w-11 h-6 flex items-center bg-gray-300 rounded-full peer peer-checked:after:translate-x-full after:absolute after:left-[2px] peer-checked:after:border-white after:bg-white after:border after:border-gray-300 after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-[#22c55e]"
+      ></div>
+    </label>
+    <button
+      type="button"
+      routerLink="/form"
+      class="inline-flex items-center justify-center text-sm font-medium ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 text-primary-foreground h-10 px-4 py-2 bg-green-500 hover:bg-green-600 transition-colors duration-200 ease-in-out rounded-md"
+    >
+      Next
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="ml-2 h-4 w-4"
+      >
+        <path d="M5 12h14"></path>
+        <path d="m12 5 7 7-7 7"></path>
+      </svg>
+    </button>
+  </form>
+  <div></div>
+</div>
