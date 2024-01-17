@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable, inject } from '@angular/core';
+import { environment as env } from '../environments/environment';
 
 export type Participant = { name: string, email: string};
 export type Pairing = [Participant, Participant];
@@ -19,6 +20,6 @@ export class DrawService {
   }
   
   drawOnServer(participants: Participant[]) {
-    return this.http.post(`http://localhost:8000/draw_pairings/`, participants);
+    return this.http.post(`${env.API_URL}draw_pairings/`, participants);
   }
 }
